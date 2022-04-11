@@ -1,0 +1,93 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+
+  @include xl {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  @include lg {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include md {
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+
+  @include sm {
+    padding: 15px;
+    grid-template-rows: 2fr 2fr 1fr 2fr;
+  }
+}
+
+.player {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+
+  @include sm {
+    align-self: center;
+    grid-column: 1/5;
+    grid-row: 3/4;
+  }
+}
+
+.weather {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  height: 100%;
+
+  @include sm {
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+}
+
+.main {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  height: 100%;
+
+  @include xl {
+    grid-column: 1/4;
+  }
+
+  @include sm {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+}
+
+.quote {
+  grid-column: 2/3;
+  grid-row: 3/4;
+
+  @include xl {
+    grid-column: 1/4;
+  }
+
+  @include sm {
+    grid-column: 1/5;
+    grid-row: 4/5;
+  }
+}
+
+footer {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  align-self: end;
+  justify-self: end;
+}

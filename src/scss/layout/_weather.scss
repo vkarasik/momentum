@@ -1,0 +1,53 @@
+.weather {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 140%;
+  color: $color-light;
+
+  @include xl {
+    font-size: 120%;
+  }
+
+  &__location {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $color-light;
+    background: transparent;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 120%;
+    font-weight: 300;
+    color: $color-light;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__wind,
+  &__humidity {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding-left: 55px;
+  }
+
+  &__humidity {
+    background: url('../assets/img/humidity.png') no-repeat left center;
+  }
+
+  &__wind {
+    background: url('../assets/img/wind-speed.png') no-repeat left center;
+  }
+
+  &__err {
+    padding-left: 5px;
+  }
+}

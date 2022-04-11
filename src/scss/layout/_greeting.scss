@@ -1,0 +1,36 @@
+.greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 300%;
+  color: $color-light;
+
+  @include md {
+    font-size: 230%;
+  }
+
+  @include sm {
+    font-size: 120%;
+  }
+
+  &__fake-name {
+    position: absolute;
+    top: 0;
+    left: -10000px;
+    padding: 0 !important;
+    visibility: hidden;
+    display: inline-block;
+  }
+
+  &__name {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: $color-light;
+  }
+}

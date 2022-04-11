@@ -1,0 +1,29 @@
+.time {
+  font-size: 800%;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  color: $color-light;
+  text-align: center;
+  margin-bottom: 10px;
+
+  @include md {
+    font-size: 600%;
+  }
+
+  @include sm {
+    font-size: 350%;
+  }
+}
+
+.date {
+  text-align: center;
+  font-size: 200%;
+  color: $color-light;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  margin-bottom: 25px;
+
+  @include md {
+    font-size: 150%;
+  }
+}
